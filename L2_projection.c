@@ -239,6 +239,7 @@ scanf("%d", &choice3);
   fclose(coord);
   fclose(eqs);
 
+  printf("\n\n\n\nSuccessfully saved output to 'fulloutput.txt', 'xmbrc.txt', 'coord.txt', and 'eqs.txt'.\n");
 
     return 0;
 }
