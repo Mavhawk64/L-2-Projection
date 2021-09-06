@@ -15,3 +15,7 @@ What I would recommend doing, is copy all of the line equations from the 'eqs.tx
 **Edit**
 
 It turns out that the c program does not create PhU to create a piecewise linear interpolation. I am going to temporarily drop the C program and move it to another language (likely JS, Java, or Python because those are the easiest to run).
+
+**Edit 2**
+
+Actually... I read it correctly the first time and misread it the second time, so I spent all of that time making a webpage... smh.
