@@ -1,0 +1,64 @@
+body {
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-size:20px;
+  background:#7ec7ba;
+  color:#3f9182;
+}
+
+h2,h3,h4,h5,h6 {
+  margin:10px;
+}
+
+.solution {
+  display:block;
+  background:#41b3a3;
+  height:auto;
+  width:900px;
+  border-radius:10px;
+  padding-top:1px;
+  padding-bottom:1px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+input {
+  background:#69dcc8;
+  color:#3f9182;
+  border-radius:10px;
+  border-color:#3f9182;
+  width:195px;
+  text-align:center;
+}
+
+input[type="radio"] {
+  margin-top:-1px;
+  vertical-align:middle;
+  margin-right:-80px;
+  margin-left:-80px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline:none;
+}
+
+::placeholder {
+  color:#aaa;
+  text-align:center;
+}
+
+button {
+  background:#e8a87c;
+  border-radius:10px;
+  border-color:#e27d60;
+}
+
+.problem {
+  display:block;
+  background:#69dcc8;
+  width:485px;
+  border-radius:10px;
+  padding-top:1px;
+  padding-bottom:1px;
+  margin-top:10px;
+  margin-bottom:10px;
+}

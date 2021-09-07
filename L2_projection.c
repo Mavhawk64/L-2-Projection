@@ -14,9 +14,10 @@ int main(int argv, const char* argc[]) {
 
 //Input
 
-  printf("Enter subinterval size: ");
+  printf("Enter subintervals (n): ");
     int nInput;
     scanf("%d", &nInput);
+    nInput++;
     double* xInput = (double*)malloc(nInput*sizeof(double));
     printf("Would you like evenly spaced intervals or manual intervals?\n1. Evenly Spaced Intervals\n2. Manual Intervals\n");
     int choice1;
@@ -129,9 +130,24 @@ scanf("%d", &choice3);
     double slope = (y2 - y1) / (x2 - x1);
     printf("y = %.*lf(x - %.*lf) + %.*lf\n", choice3, slope, choice3, x1, choice3, y1);
   }
-
-
-
+  if(choice4 == 'y') {
+  printf("Here is the piecewise interpolation:\n");
+  double x1 = xInput[0];
+  double x2 = xInput[1];
+  double y1 = augmentedMatrix[0][nInput];
+  double y2 = augmentedMatrix[1][nInput];
+  double slope = (y2 - y1) / (x2 - x1);
+  printf("y = {%.*lf<=x<=%.*lf:%.*lf(x-%.*lf)+%.*lf", choice3, x1, choice3, x2, choice3, slope, choice3, x1, choice3, y1);
+  for(int i = 2; i < nInput; i++) {
+    x1 = xInput[i-1];
+    x2 = xInput[i];
+    y1 = augmentedMatrix[i - 1][nInput];
+    y2 = augmentedMatrix[i][nInput];
+    slope = (y2 - y1) / (x2 - x1);
+    printf(",%.*lf<=x<=%.*lf:%.*lf(x-%.*lf)+%.*lf", choice3, x1, choice3, x2, choice3, slope, choice3, x1, choice3, y1);
+  }
+  printf("}\n");
+  }
 
 
 // FILE OUTPUT

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>L2 Projection</title>
+    <script src="https://pagecdn.io/lib/mathjs/9.4.4/math.js" crossorigin="anonymous"  ></script>
+    <script src="L2_projection.js" charset="utf-8" type="text/javascript"></script>
+    <link rel="stylesheet" href="L2_projection.css">
+  </head>
+  <body>
+    <h1>L2 Projection</h1>
+    <h2>Parameters</h2>
+    <span class="problem">
+      <h3>Expression</h3>
+      <h5>Please enter an expression to be evaluated or a set of y values (Ex. 0,1,4,9).</h5>
+    </span>
+      <input type="text" name="expression" value="x^2" placeholder="Expression" id="expression">
+    <span class="problem">
+      <h3>Nodes</h3>
+      <h5>Please enter the amount of nodes.</h5>
+    </span>
+    <input type="text" name="n" value="4" placeholder="Nodes" id="nodes">
+    <span class="problem">
+      <h3>Interval Spacing</h3>
+      <h5>Would you like evenly spaced intervals or manual intervals? <p id="instructions" hidden="true">Please enter the subintervals (Ex. 0,1/3,2/3,1).</p></h5>
+    </span>
+    <input id="even" class="radio" type="radio" name="intervals" onclick="document.getElementById('intervals').hidden = true;document.getElementById('instructions').hidden=true;document.getElementById('intervals').value='';document.getElementById('intervals').disabled=true;" checked>Evenly Spaced Intervals</input><br/>
+    <input class="radio" type="radio" name="intervals" onclick="document.getElementById('intervals').hidden = false;document.getElementById('instructions').hidden=false;document.getElementById('intervals').value='';document.getElementById('intervals').disabled=false;">Manual Intervals</input>
+    <input type="text" name="intervals" value="" placeholder="Manual Intervals" hidden="true" id="intervals">
+    <span class="problem">
+      <h3>Boundaries</h3>
+      <h5>Please enter the starting and stopping indices (a and b) where (a < b).</h5>
+    </span>
+    <input type="text" value="0" placeholder="Smaller Index (a)" id="a">
+    <input type="text" value="1" placeholder="Larger Index (b)" id="b">
+    <br/><br/>
+    <button type="submit" name="button" onclick="submitValues()">Submit!</button>
+    <span class="solution" id="solution">
+      <h3>Output</h3>
+    </span>
+  </body>
+</html>
